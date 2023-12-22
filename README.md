@@ -1,6 +1,6 @@
-### Iskra manager
+## Iskra manager
 
-The library allows to execute 4 type of actions:
+The library allows to execute the following operations:
 
 ```sh
 python main.py run
@@ -13,8 +13,11 @@ python main.py run
   [--production]  
 ```
 
-1. Create
-   Allows to create a company and if the contracts_file parameter is provided, the process also proceeds to create the contracts included in that file.
+##### 1.CREATE
+
+Create a company and if the contracts_file parameter is provided, the process also proceeds to create the contracts included in that file.
+
+Example: Creation of sieactiva company and load contracts in testing environment.
 
 ```sh
 python main.py run
@@ -26,8 +29,11 @@ python main.py run
   --testing  
 ```
 
-2. Load
-   Allows to load new contracts for a company.
+##### 2. LOAD
+
+Load new contracts for a company.
+
+Example: Load of contracts from sieactiva company in testing environment.
 
 ```sh
 python main.py run
@@ -39,9 +45,11 @@ python main.py run
   --testing  
 ```
 
-3. Delete
-   If the contracts_file parameter is provided, the process only proceeds to delete the contracts included in that file.
-   Otherwise the process deletes the company.
+##### 3. DELETE
+
+If the contracts_file parameter is provided, the process only proceeds to delete the contracts included in that file for the company_name.Otherwise the process deletes the company.
+
+Example: Delete of contracts from sieactiva company in testing environment.
 
 ```sh
 python main.py run
@@ -53,17 +61,13 @@ python main.py run
   --testing
 ```
 
-4. List [TO DO]
-   Generates a csv with contracts loaded of a certain company.
-```sh
-python main.py run
-  --config_file config.json
-  --company_name sieactiva
-  --company_id 999999
-  --operation  list  
-  --testing
-```
+##### 4. LIST
+
+Generates a csv with contracts loaded of a certain company. (TO DO)
+
 
 ##### RUN tests
+
 python -m unittest test/test_company.py
-python -m unittest test/test_contracts.py [TO DO]
+
+python -m unittest test/test_contracts.py (TO DO)
